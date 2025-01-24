@@ -14,7 +14,7 @@ Task Nest is a simple and efficient Todo management application built with React
 ## Technologies Used
 
 - **React**: JavaScript library for building user interfaces.
-- **Context API**: For state management across the app.
+- **Context API**: For state management across the app. 
 - **Local Storage**: To persist tasks even after page reload.
 - **Tailwind CSS**: For fast and responsive UI design.
 
