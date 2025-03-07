@@ -27,8 +27,8 @@ function Sidebar() {
           }}
         />
         <div>
-          <p className="font-bold text-lg">Alex</p>
-          <p className="text-sm text-gray-500 dark:text-gray-400">alex@example.com</p>
+          <p className="font-bold text-lg">user</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">user@example.com</p>
         </div>
       </div>
       {/* Navigation */}
