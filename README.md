@@ -1,35 +1,124 @@
 # Task Nest
 
-Task Nest is a simple and efficient Todo management application built with React, Context API, and Local Storage. It allows users to manage tasks (Todos), including adding, editing, marking as completed, and deleting them. The app uses the Context API to manage the state and persists the tasks in the browser's local storage, so the data remains even after a page refresh.
+Task Nest is a modern, responsive Todo application built with React, Redux Toolkit, and Tailwind CSS. It offers a simple authentication mechanism, robust todo management with CRUD operations, an integrated weather widget, and a customizable dark/light theme.
+
+### Login
+
+Use the following credentials to log in:
+
+- **Username:** `admin`
+- **Password:** `password`
 
 ## Features
 
-- Add new tasks with a description.
-- Edit existing tasks.
-- Mark tasks as completed.
-- Delete tasks.
-- Persistent data with Local Storage – your tasks are saved even after refreshing the page.
-- Responsive and clean UI design built using Tailwind CSS.
+- **User Authentication**  
+  A simple login page that requires users to enter valid credentials to access the app.  
+  **Login Credentials:**  
+  - **Username:** `admin`  
+  - **Password:** `password`
 
-## Technologies Used
+- **Todo Management**  
+  - Add new todos, update existing ones, mark them as complete/incomplete, and delete them.  
+  - Two display modes: List view and Block view.  
+  - Todos are stored in Redux and persisted to localStorage.
 
-- **React**: JavaScript library for building user interfaces.
-<<<<<<< HEAD
-- **Context API**: For state management across the app.
-=======
-- **Context API**: For state management across the app. 
->>>>>>> ad588a8ab2c46f9f9ddbedce82a174010d9150a0
-- **Local Storage**: To persist tasks even after page reload.
-- **Tailwind CSS**: For fast and responsive UI design.
+- **Weather Widget**  
+  Displays the current temperature fetched from the [Open Meteo API](https://open-meteo.com/).  
+  - Automatically refreshes every 10 minutes with a manual refresh option.
 
-## Installation
+- **Responsive Sidebar**  
+  Features user profile information, navigation links, and a progress indicator (circular progress bar) based on the completion of todos.
 
-Follow these steps to get your development environment set up:
+- **Dark/Light Theme Toggle**  
+  Easily switch between dark and light modes. The selected theme is stored in localStorage and applied globally.
 
-1. Clone the repository:
+- **Persistent State**  
+  Redux state changes (authentication status and todos) are persisted in localStorage, so your session remains active even after a page refresh.
+
+## Technologies
+
+- **React:** For building the user interface with functional components and hooks.
+- **Redux Toolkit & React Redux:** For state management and data persistence.
+- **Tailwind CSS:** For a utility-first approach to styling.
+- **Vite:** For a fast and modern development environment.
+- **Heroicons:** For clean, modern icons.
+- **LocalStorage:** For persisting user data and session state.
+
+## Project Structure
+
+```
+Task Nest/
+├── public/
+│   └── index.html               # HTML template
+├── src/
+│   ├── Components/
+│   │   ├── Login.jsx            # Login page component
+│   │   ├── Sidebar.jsx          # Sidebar with user profile and progress bar
+│   │   ├── TodoForm.jsx         # Form component for adding todos
+│   │   ├── TodoItem.jsx         # Todo item component for listing/updating/deleting todos
+│   │   └── WeatherWidget.jsx    # Weather widget component displaying temperature
+│   ├── context/
+│   │   ├── TodoContext.js       # Todo context (example usage; Redux handles state)
+│   │   └── ThemeContext.jsx     # Theme context for dark/light mode toggle
+│   ├── Features/
+│   │   ├── auth/
+│   │   │   └── authSlice.js     # Redux slice for authentication
+│   │   └── todos/
+│   │       └── todosSlice.js    # Redux slice for todo management
+│   ├── hooks/
+│   │   └── useFetch.js          # Custom hook for fetching weather data
+│   ├── App.jsx                  # Main application component
+│   ├── index.css                # Global styles with Tailwind CSS
+│   ├── main.jsx                 # Entry point; renders App with Redux and Theme providers
+│   └── store.js                 # Redux store configuration with localStorage persistence
+├── package.json                 # Project dependencies and scripts
+├── postcss.config.js            # PostCSS configuration
+├── tailwind.config.js           # Tailwind CSS configuration
+└── vite.config.js               # Vite configuration file
+```
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or later)
+- npm (v6 or later) or yarn
+
+### Installation
+
+1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/Pushpender015/Task-Nest.git
-<<<<<<< HEAD
-=======
+   git clone <repository-url>
+   ```
 
->>>>>>> ad588a8ab2c46f9f9ddbedce82a174010d9150a0
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd 10todocontextlocal
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   The application will run at `http://localhost:3000` (or the port specified by Vite).
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new features.
+
+## Acknowledgements
+
+- **Open Meteo API:** For providing weather data.
+- **Vite:** For a blazing fast development experience.
+- **Tailwind CSS:** For efficient styling.
+- **Redux Toolkit:** For simplifying state management.
