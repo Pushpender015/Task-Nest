@@ -2,13 +2,6 @@
 
 Task Nest is a modern, responsive Todo application built with React, Redux Toolkit, and Tailwind CSS. It offers a simple authentication mechanism, robust todo management with CRUD operations, an integrated weather widget, and a customizable dark/light theme.
 
-### Login
-
-Use the following credentials to log in:
-
-- **Username:** `admin`
-- **Password:** `password`
-
 ## Features
 
 - **User Authentication**  
