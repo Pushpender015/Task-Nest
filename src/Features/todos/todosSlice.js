@@ -1,6 +1,7 @@
 // src/features/todos/todosSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
+// initial state
 const initialState = {
   todos: (() => {
     const stored = localStorage.getItem("todos");
